@@ -1,0 +1,106 @@
+/* HEADER */
+.main-header {
+  background: #0b2c4d;
+  color: #fff;
+  padding: 12px 0;
+}
+
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-area img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* CAROUSEL */
+.top-carousel {
+  width: 100%;
+  height: 70vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-container {
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 18%;
+  left: 8%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  color: #fff;
+  max-width: 500px;
+  border-left: 5px solid #f5b700;
+}
+
+.carousel-caption h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 17px;
+}
+
+/* Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.carousel-btn.prev { left: 20px; }
+.carousel-btn.next { right: 20px; }
+.carousel-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
