@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Musuani Secondary School</title>
+</head>
+<body style="margin:0; font-family:Arial, Helvetica, sans-serif; background:#ffffff; color:#000;">
+
+  <div class="navbar" style="width:100%; background:#0a2a52; overflow:hidden;">
+    <a href="#" class="school-name" style="
+        float:left;
+        display:block;
+        color:white;
+        text-align:center;
+        padding:10px 18px;
+        text-decoration:none;
+        font-size:16px;
+        border-radius:5px;
+        transition:background 0.3s;
+    ">MUSUANI SECONDARY SCHOOL</a>
+
+    <a href="index.html" style="
+        float:left;
+        display:block;
+        color:white;
+        text-align:center;
+        padding:10px 18px;
+        text-decoration:none;
+        font-size:16px;
+        border-radius:5px;
+        transition:background 0.3s;
+    ">Home</a>
+
+    <a href="about.html" style="
+        float:left;
+        display:block;
+        color:white;
+        text-align:center;
+        padding:10px 18px;
+        text-decoration:none;
+        font-size:16px;
+        border-radius:5px;
+        transition:background 0.3s;
+    ">About</a>
+
+    <a href="academics.html" style="
+        float:left;
+        display:block;
+        color:white;
+        text-align:center;
+        padding:10px 18px;
+        text-decoration:none;
+        font-size:16px;
+        border-radius:5px;
+        transition:background 0.3s;
+    ">Academics</a>
+
+    <a href="admissions.html" style="
+        float:left;
+        display:block;
+        color:white;
+        text-align:center;
+        padding:10px 18px;
+        text-decoration:none;
+        font-size:16px;
+        border-radius:5px;
+        transition:background 0.3s;
+    ">Admissions</a>
+
+    <a href="contact_details.html" style="
+        float:left;
+        display:block;
+        color:white;
+        text-align:center;
+        padding:10px 18px;
+        text-decoration:none;
+        font-size:16px;
+        border-radius:5px;
+        transition:background 0.3s;
+    ">Contact Us</a>
+  </div>
+
+</body>
+<!-- ================= ABOUT US PHOTO CAROUSEL ================= -->
+<section style="max-width:1200px; margin:50px auto; padding:20px;">
+
+  <h2 style="text-align:center; font-size:32px; margin-bottom:30px; color:#0a2a52;">
+    About Us
+  </h2>
+
+  <!-- Carousel Container -->
+  <div style="
+      width:100%;
+      height:500px;   /* adjust height as needed */
+      overflow:hidden;
+      position:relative;
+      border-radius:3px;
+      box-shadow:0 2px 4px rgba(0,0,0,0.10);
+  " class="carousel">
+
+    <!-- Slides -->
+    <img src="https://i.ibb.co/0RQ0HQfW/ADMINBLOCK1.jpg" alt="Musuani Secondary School Administration Block" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:1; transition:opacity 1s;">
+    <img src="https://i.ibb.co/0VC1X2fP/DORM1.jpg" alt="Student Dormitory Building" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/0pmBdq1G/ADMINBLOCK3.jpg" alt="School Campus View" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/bjvXRcYp/ADMINBLOCK4.jpg" alt="School Facilities" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/wffGKv2/MUSK1.jpg" alt="Musuani Secondary School Building" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/rGhvZBvm/MUSK2.jpg" alt="School Compound" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/wZbB2ZxH/COMP-LAB.jpg" alt="Computer Laboratory" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/j9tjRSWX/BUS.jpg" alt="School Bus" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/r2CDZpcw/INF.jpg" alt="School Infrastructure" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+    <img src="https://i.ibb.co/ymQww9Vd/DORMS.jpg" alt="Student Dormitories" style="width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; opacity:0; transition:opacity 1s;">
+
+  </div>
+</section>
+
+<!-- ================= CAROUSEL JS ================= -->
+<script>
+  const slides = document.querySelectorAll('.carousel img');
+  let current = 0;
+
+  function showNextSlide() {
+    slides[current].style.opacity = 0; // hide current
+    current = (current + 1) % slides.length; // next index
+    slides[current].style.opacity = 1; // show next
+  }
+
+  setInterval(showNextSlide, 5000); // change every 5 seconds
+</script>
+
+  <!-- ================= ABOUT US SECTION ================= -->
+  <section style="
+      max-width:1200px;
+      margin:70px auto;
+      padding:50px 20px;
+      background:#f7f8fc;
+  ">
+<!-- SECTION TITLE -->
+    <h1 style="
+        font-size:36px;
+        font-weight:800;
+        text-align:center;
+        margin-bottom:20px;
+    ">
+      About Musuani Secondary School
+    </h1>
+
+    <!-- INTRO PARAGRAPH -->
+    <p style="
+        max-width:900px;
+        margin:0 auto 40px;
+        font-size:17px;
+        line-height:1.8;
+        color:#3f4aa8;
+        text-align:center;
+    ">
+      Musuani Secondary School is a public secondary institution domiciled in Kenya
+      and governed under the Basic Education Act, 2013. The school is committed to
+      providing quality education that nurtures academic excellence, discipline,
+      and holistic learner development.
+    </p>
+
+    <!-- ===== SCHOOL HISTORY & PROFILE ===== -->
+    <div style="
+        background:#ffffff;
+        padding:30px;
+        margin-bottom:40px;
+    ">
+      <h1 style="margin-bottom:15px;">School History</h1>
+
+      <p style="line-height:3.8; color:#444;">
+        Musuani Secondary School is located in Kitui County, Migwani Sub-County,
+        Thokoa Zone. The school was officially registered on
+        <strong>14th March 2006</strong> under registration number
+        <strong>138300012248</strong>.
+      </p>
+
+      <p style="line-height:1.8; color:#444;">
+        The school is categorized as an <strong>Extra  County Public school</strong>
+        (National, Extra County, County, and Sub-County) established, owned, and
+        operated by the Ministry of Education (Kenya).
+      </p>
+
+      <p style="line-height:1.8; color:#444;">
+        Musuani Secondary School operates as a <strong>day and boarding school</strong>.
+        As at <strong>30th June 2025</strong>, the school had a student population
+        of <strong>300 learners</strong>, organized into <strong>two double streams</strong>.
+        The school has <strong>20 teachers</strong>, all deployed by the Teachers
+        Service Commission (TSC), with none employed directly by the School Board
+        of Management.
+      </p>
+    </div>
+    <!-- ================= SCHOOL PROFILE CARDS ================= -->
+<section style="max-width:1200px; margin:50px auto; padding:20px;">
+
+  <h2 style="text-align:center; font-size:32px; margin-bottom:40px; color:#0a2a52;">
+    School Profile
+  </h2>
+
+  <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:25px;
+  ">
+
+    <!-- CARD 1: General Info -->
+    <div style="
+        background:#ffffff;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 6px 12px rgba(0,0,0,0.1);
+        text-align:left;
+    ">
+      <h3 style="color:#0a2a52; margin-bottom:10px;">General Info</h3>
+      <p><strong>School Code:</strong> M4100001</p>
+      <p><strong>Address:</strong> 647 Mwingi</p>
+      <p><strong>Level:</strong> Secondary School / Senior School</p>
+      <p><strong>Day/Boarding:</strong> Day & Boarding</p>
+      <p><strong>Gender:</strong> Mixed</p>
+      <p><strong>Ownership:</strong> Public</p>
+      <p><strong>Sponsor:</strong> Religious Organisation(AIC)</p>
+      <p><strong>Student Needs:</strong> Ordinary</p>
+    </div>
+
+    <!-- CARD 2: Facts -->
+    <div style="
+        background:#ffffff;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 6px 12px rgba(0,0,0,0.1);
+        text-align:left;
+    ">
+      <h3 style="color:#0a2a52; margin-bottom:10px;">Facts</h3>
+      <p><strong>Acreage:</strong> 0</p>
+      <p><strong>Acreage per enrolment:</strong> 51.3</p>
+      <p><strong>Pupil Teacher Ratio:</strong> 2.1</p>
+      <p><strong>Total Enrolment:</strong> 350</p>
+      <p><strong>Total Teaching Staff:</strong> 25</p>
+    </div>
+
+    <!-- CARD 3: Location -->
+    <div style="
+        background:#ffffff;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 6px 12px rgba(0,0,0,0.1);
+        text-align:left;
+    ">
+      <h3 style="color:#0a2a52; margin-bottom:10px;">Location</h3>
+      <p><strong>County:</strong> Kitui</p>
+      <p><strong>Constituency:</strong> Mwingi South</p>
+      <p><strong>Province:</strong> Eastern</p>
+      <p><strong>District:</strong> Mwingi</p>
+      <p><strong>Division:</strong> Migwani</p>
+      <p><strong>Location:</strong> Kyome</p>
+      <p><strong>Sub Location:</strong> Musuani</p>
+    </div>
+
+  </div>
+</section>
+
+    <!-- ===== MOTTO | VISION | MISSION ===== -->
+    <div style="
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+        gap:25px;
+        margin-bottom:40px;
+    ">
+
+      <div style="background:#ffffff; padding:25px;">
+        <h1>School Motto</h1>
+        <p style="color:#3f4aa8; font-weight:900;">
+          “Shine and Reflect”
+        </p>
+      </div>
+
+      <div style="background:#ffffff; padding:25px;">
+        <h1>Vision</h1>
+        <p style="color:#3f4aa8;">
+          A model centre of excellence for holistic development.
+        </p>
+      </div>
+
+      <div style="background:#ffffff; padding:25px;">
+        <h1>Mission</h1>
+        <p style="color:#3f4aa8;">
+          To become a model centre for holistic development of the learner through
+          self-discipline and provision of quality education.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- ===== CORE VALUES ===== -->
+    <div style="
+        background:#ffffff;
+        padding:30px;
+    ">
+      <h3 style="margin-bottom:20px;">Our Core Values</h3>
+
+      <ul style="
+          display:grid;
+          grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+          gap:10px;
+          list-style:none;
+          padding:0;
+          margin:0;
+          color:#3f4aa8;
+          line-height:1.8;
+      ">
+        <li>Integrity</li>
+        <li>Teamwork</li>
+        <li>Professionalism</li>
+        <li>Transparency</li>
+        <li>Accountability</li>
+        <li>Fidelity</li>
+        <li>Fairness and Hard Work</li>
+        <li>Commitment</li>
+        <li>Efficiency</li>
+        <li>Continual Improvement</li>
+        <li>Courtesy</li>
+        <li>Respect for Individual Differences</li>
+        <li>Innovation & Creativity</li>
+      </ul>
+    </div>
+
+  </section>
+<!-- ================= SCHOOL BOARD OF MANAGEMENT ================= -->
+<section style="max-width:1200px; margin:70px auto; padding:50px 20px; background:#f7f8fc;">
+  
+  <!-- SECTION TITLE -->
+  <h2 style="
+      font-size:36px;
+      font-weight:800;
+      text-align:center;
+      margin-bottom:40px;
+      color:#000;
+  ">
+    School Board of Management
+  </h2>
+
+  <p style="
+      max-width:900px;
+      margin:0 auto 50px;
+      font-size:17px;
+      line-height:1.8;
+      color:#3f4aa8;
+      text-align:center;
+  ">
+    The School Board of Management, established under Section 55 of the Basic Education Act, 2013,
+    is composed of the following members:
+  </p>
+
+  <!-- BOM CARDS GRID -->
+  <div style="
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      gap:25px;
+  ">
+
+    <!-- 1 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Mwangi D. M.</h3>
+      <p><strong>Designation:</strong> Principal / BOM Secretary</p>
+    </div>
+
+    <!-- 2 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mrs. Winfred Ndumu</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 3 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Francis Mutiso</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 4 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mrs. Rachael Kimanzi</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 5 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Michael Ngenga</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 6 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mrs. Jemimah M. Musyoka</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 7 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Joel Nzenga</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 8 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Jackson Kanga</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 9 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Daniel Muthui</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 10 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mrs. Constant Mwalimu</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 11 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mrs. Hellen Mue</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 12 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. James Kangui</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 13 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Joseph Nyitu</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 14 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Peter Lemunyara</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 15 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. John Mwanza</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 16 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Mr. Jackson M. Katee</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+    <!-- 17 -->
+    <div style="background:#fff; padding:20px; border-radius:12px; box-shadow:0 6px 12px rgba(0,0,0,0.1); text-align:center;">
+      <h3 style="color:#0a2a52;">Dorcas Mwenga</h3>
+      <p><strong>Designation:</strong> BOM Member</p>
+    </div>
+
+  </div>
+</section>
+
+<footer style="
+  background:#1e3a8a;
+  color:#ffffff;
+  margin-top:80px;
+  font-family:Arial, sans-serif;
+  width:100%;
+">
+
+  <!-- MAIN FOOTER CONTENT -->
+  <div style="
+    max-width:1200px;
+    margin:0 auto;
+    padding:60px 20px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    color:#ffffff;
+  ">
+
+    <!-- LEFT: SCHOOL INFO -->
+    <div style="
+      width:50%;
+      min-width:280px;
+      color:#ffffff;
+    ">
+      <h2 style="
+        font-size:34px;
+        margin-bottom:25px;
+        color:#ffffff;
+      ">
+        Musuani Secondary School
+      </h2>
+
+      <p style="margin:12px 0; color:#ffffff;">
+        <strong>School Motto :</strong> Excellence Through Discipline
+      </p>
+
+      <p style="margin:12px 0; color:#ffffff;">
+        <strong>School Mission :</strong> To provide quality education that nurtures academic excellence, discipline, and moral integrity.
+      </p>
+
+      <p style="margin:12px 0; color:#ffffff;">
+        <strong>School Vision :</strong> To be a leading institution in holistic secondary education.
+      </p>
+    </div>
+
+    <!-- RIGHT: CONTACT INFO -->
+    <div style="
+      width:40%;
+      min-width:280px;
+      text-align:right;
+      color:#ffffff;
+    ">
+      <h3 style="
+        font-size:24px;
+        margin-bottom:20px;
+        color:#ffffff;
+      ">
+        Contact Us
+      </h3>
+
+      <p style="margin:10px 0; color:#ffffff;">Email: musuani.sec@gmail.com</p>
+      <p style="margin:10px 0; color:#ffffff;">Phone: 0722242293 </p>
+      <p style="margin:10px 0; color:#ffffff;">Address: 647-90400 </p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div style="
+    border-top:1px solid rgba(255,255,255,0.3);
+    padding:18px 10px;
+    text-align:center;
+    font-size:14px;
+    color:#ffffff;
+  ">
+    © 2026 Musuani Secondary School. All rights reserved.<br>
+
+    Powered by
+    <a href="mailto:mwangiemmah2023@gmail.com" style="
+      color:#ffffff;
+      font-weight:600;
+      text-decoration:none;
+    ">Service Provider</a>
+  </div>
+
+</footer>
+</body>
+</html>

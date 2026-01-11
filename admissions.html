@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Admissions</title>
+  
+  <!-- INLINE CSS -->
+  <style>
+    /* General Reset & Fonts */
+    body, html {
+      margin:0;
+      padding:0;
+      font-family:'Segoe UI', sans-serif;
+      background:#f9fafc;
+      color:#444;
+    }
+
+    a {
+      text-decoration:none;
+      color:inherit;
+    }
+
+    /* Container */
+    .container {
+      max-width:1200px;
+      margin:auto;
+      padding:60px 20px;
+    }
+
+    /* Header */
+    .header {
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .header h1 {
+      font-size:36px;
+      color:#0a2a52;
+      margin-bottom:10px;
+    }
+
+    .header p {
+      font-size:16px;
+      color:#444;
+      max-width:800px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    /* Toggle Buttons */
+    .toggle-buttons {
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      margin:40px 0;
+      flex-wrap:wrap;
+    }
+
+    .toggle-btn {
+      background:linear-gradient(135deg,#0a2a52,#3f4aa8);
+      color:#fff;
+      padding:18px 50px;
+      border-radius:45px;
+      font-weight:700;
+      font-size:18px;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      box-shadow:0 12px 30px rgba(10,42,82,0.35);
+    }
+
+    .toggle-btn:hover {
+      transform:translateY(-3px);
+      box-shadow:0 18px 35px rgba(10,42,82,0.45);
+    }
+
+    /* Admissions Content */
+    .admissions-content {
+      display:none;
+      background:#fff;
+      padding:40px 25px;
+      border-radius:12px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom:50px;
+    }
+
+    .admissions-content.active {
+      display:block;
+    }
+
+    .admissions-content h2 {
+      color:#0a2a52;
+      font-size:28px;
+      margin-bottom:20px;
+      text-align:center;
+    }
+
+    .admissions-content h3 {
+      color:#3f4aa8;
+      font-size:22px;
+      margin-top:25px;
+      margin-bottom:12px;
+    }
+
+    .admissions-content ul {
+      padding-left:20px;
+      line-height:1.8;
+      margin-bottom:25px;
+    }
+
+    .admissions-content ul li {
+      margin-bottom:10px;
+    }
+
+    /* Fee Tables */
+    .admissions-content table {
+      width:100%;
+      border-collapse: collapse;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(0,0,0,0.06);
+      margin-top:20px;
+    }
+
+    .admissions-content th, .admissions-content td {
+      padding:16px 18px;
+      text-align:left;
+    }
+
+    .admissions-content th {
+      background:#0a2a52;
+      color:#fff;
+      font-size:17px;
+    }
+
+    .admissions-content tr:nth-child(even) {
+      background:#f1f4ff;
+    }
+
+    .admissions-content tr:hover {
+      background:#e0e6f5;
+      transition:0.3s;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      .toggle-btn {
+        width:100%;
+        padding:16px 0;
+        font-size:16px;
+      }
+      .admissions-content th, .admissions-content td {
+        padding:12px 10px;
+        font-size:14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div style="background:#0a2a52; overflow:hidden;">
+    <a href="#" style="
+      float:left; display:block; color:white; text-align:center;
+      padding:10px 18px; text-decoration:none; font-size:16px;
+      border-radius:5px; transition:background 0.3s;
+      font-weight:bold;
+    ">MUSUANI SECONDARY SCHOOL</a>
+    <a href="index.html" style="
+      float:left; display:block; color:white; text-align:center;
+      padding:10px 18px; text-decoration:none; font-size:16px;
+      border-radius:5px; transition:background 0.3s;
+    ">Home</a>
+    <a href="about.html" style="
+      float:left; display:block; color:white; text-align:center;
+      padding:10px 18px; text-decoration:none; font-size:16px;
+      border-radius:5px; transition:background 0.3s;
+    ">About</a>
+    <a href="academics.html" style="
+      float:left; display:block; color:white; text-align:center;
+      padding:10px 18px; text-decoration:none; font-size:16px;
+      border-radius:5px; transition:background 0.3s;
+    ">Academics</a>
+    <a href="admissions.html" style="
+      float:left; display:block; color:white; text-align:center;
+      padding:10px 18px; text-decoration:none; font-size:16px;
+      border-radius:5px; transition:background 0.3s;
+    ">Admissions</a>
+    <a href="contact_details.html" style="
+      float:left; display:block; color:white; text-align:center;
+      padding:10px 18px; text-decoration:none; font-size:16px;
+      border-radius:5px; transition:background 0.3s;
+    ">Contact Us</a>
+  </div>
+  <!-- ================= IMAGE CAROUSEL ================= -->
+<div style="max-width:100%; max-height:400px; margin:0px; position:relative; overflow:hidden; border-radius:5px; box-shadow:0 5px 10px rgba(0,0,0,0.15);">
+
+  <!-- Carousel Images -->
+  <img class="carousel-slide" src="https://i.ibb.co/R46xRNZN/ADMINBLOCK2.jpg" style="width:100%; display:block;">
+  <img class="carousel-slide" src="https://i.ibb.co/0pmBdq1G/ADMINBLOCK3.jpg" style="width:100%; display:none;">
+  <img class="carousel-slide" src="https://i.ibb.co/bjvXRcYp/ADMINBLOCK4.jpg" style="width:100%; display:none;">
+  <img class="carousel-slide" src="https://i.ibb.co/wZbB2ZxH/COMP-LAB.jpg" style="width:100%; display:none;">
+
+  <!-- INLINE CSS -->
+  <style>
+    .carousel-slide {
+      transition: opacity 1s ease-in-out;
+    }
+  </style>
+
+  <!-- INLINE JS -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const totalSlides = slides.length;
+
+    function showNextSlide() {
+      slides[currentSlide].style.display = 'none';
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].style.display = 'block';
+    }
+
+    // Auto change every 5 seconds
+    setInterval(showNextSlide, 5000);
+  </script>
+</div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>Admissions</h1>
+      <p>Welcome to our school! We accept applications for both CBE (Senior Secondary) and 8-4-4 (Senior Secondary) streams. Please find below all details about eligibility, required documents, admission process, deadlines, and fees. Use the buttons below to view the stream you want to apply for.</p>
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="toggle-buttons">
+      <button class="toggle-btn" onclick="showStream('CBE')">CBE Admissions</button>
+      <button class="toggle-btn" onclick="showStream('kcse')">8-4-4 Admissions</button>
+    </div>
+
+    <!-- ================= CBE / CBE SECTION ================= -->
+    <div id="CBE" class="admissions-content">
+      <h2>CBE  – Senior Secondary Admissions</h2>
+
+      <h3>Eligibility Criteria</h3>
+      <ul>
+        <li>Completion of Primary School (Grade 6 or equivalent)</li>
+        <li>Age within Ministry of Education guidelines</li>
+        <li>Readiness for Senior Secondary learning</li>
+      </ul>
+
+      <h3>Required Documents</h3>
+      <ul>
+        <li>Completed Admission Form</li>
+        <li>Birth Certificate / National ID</li>
+        <li>KCPE / Primary School Report Card</li>
+        <li>Passport-sized photographs</li>
+        <li>Medical / Vaccination Records</li>
+      </ul>
+
+      <h3>Admission Process</h3>
+      <ul>
+        <li>Fill the application form (online or at school)</li>
+        <li>Submit required documents to the Admissions Office</li>
+        <li>Attend assessment or interview if applicable</li>
+        <li>Receive confirmation and fee details</li>
+        <li>Complete fee payment to secure placement</li>
+      </ul>
+
+      <h3>Application Deadlines</h3>
+      <ul>
+        <li>Term 1: Applications close by January 2026</li>
+        <li>Term 2: Applications close by May 2026</li>
+        <li>Term 3: Applications close by September 2026</li>
+      </ul>
+      <a 
+  href="https://forms.gle/vZdhiEsCesArYsV4A"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cbe-apply-btn"
+  style="
+    display:inline-block;
+    margin:40px auto;
+    padding:20px 40px;
+    background:linear-gradient(135deg, #0a2a52, #3f4aa8);
+    color:#ffffff;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    letter-spacing:1px;
+    border-radius:50px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    text-align:center;
+    transition:all 0.3s ease;
+  "
+>
+  APPLY FOR CBE ADMISSION
+</a>
+
+<script>
+  const cbeBtn = document.querySelector('.cbe-apply-btn');
+
+  cbeBtn.addEventListener('mouseenter', () => {
+    cbeBtn.style.transform = 'translateY(-3px) scale(1.05)';
+    cbeBtn.style.boxShadow = '0 18px 40px rgba(0,0,0,0.35)';
+  });
+
+  cbeBtn.addEventListener('mouseleave', () => {
+    cbeBtn.style.transform = 'translateY(0) scale(1)';
+    cbeBtn.style.boxShadow = '0 12px 30px rgba(0,0,0,0.25)';
+  });
+</script>
+<!-- ================= 8-4-4 / SENIOR SCHOOL FEE STRUCTURE ================= -->
+<div style="max-width:1000px; margin:auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); margin-bottom:50px;">
+  <h2 style="text-align:center; color:#0a2a52; margin-bottom:25px;">CBE / Senior School Fee Structure 2026</h2>
+
+  <h3 style="color:#3f4aa8; margin-bottom:12px;">A: Boarding</h3>
+  <table style="width:100%; border-collapse:collapse; box-shadow:0 8px 25px rgba(0,0,0,0.06); margin-bottom:20px;">
+    <thead>
+      <tr style="background:#0a2a52; color:#fff;">
+        <th style="padding:14px;">S/N</th>
+        <th style="padding:14px;">Votehead</th>
+        <th style="padding:14px;">Term I (KES)</th>
+        <th style="padding:14px;">Term II (KES)</th>
+        <th style="padding:14px;">Term III (KES)</th>
+        <th style="padding:14px;">Total (KES)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">1</td>
+        <td style="padding:12px;">Boarding Equipment & Stores</td>
+        <td style="padding:12px;">10,500</td>
+        <td style="padding:12px;">9,185</td>
+        <td style="padding:12px;">5,700</td>
+        <td style="padding:12px;">25,385</td>
+      </tr>
+      <tr>
+        <td style="padding:12px;">2</td>
+        <td style="padding:12px;">Repair, Maintenance & Improvement</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">500</td>
+        <td style="padding:12px;">500</td>
+        <td style="padding:12px;">2,000</td>
+      </tr>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">3</td>
+        <td style="padding:12px;">Local Travel & Transport</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">750</td>
+        <td style="padding:12px;">450</td>
+        <td style="padding:12px;">2,200</td>
+      </tr>
+      <tr>
+        <td style="padding:12px;">4</td>
+        <td style="padding:12px;">Administration Cost</td>
+        <td style="padding:12px;">1,400</td>
+        <td style="padding:12px;">800</td>
+        <td style="padding:12px;">600</td>
+        <td style="padding:12px;">2,800</td>
+      </tr>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">5</td>
+        <td style="padding:12px;">Electricity, Water & Conservancy</td>
+        <td style="padding:12px;">2,000</td>
+        <td style="padding:12px;">1,200</td>
+        <td style="padding:12px;">800</td>
+        <td style="padding:12px;">4,000</td>
+      </tr>
+      <tr>
+        <td style="padding:12px;">6</td>
+        <td style="padding:12px;">Personal Emoluments</td>
+        <td style="padding:12px;">2,000</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">900</td>
+        <td style="padding:12px;">3,900</td>
+      </tr>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">7</td>
+        <td style="padding:12px;">Activity Fees</td>
+        <td style="padding:12px;">100</td>
+        <td style="padding:12px;">100</td>
+        <td style="padding:12px;">50</td>
+        <td style="padding:12px;">250</td>
+      </tr>
+      <tr style="font-weight:bold; background:#e0e6f5;">
+        <td colspan="2" style="padding:12px; text-align:right;">TOTAL FEES KSHS</td>
+        <td style="padding:12px;">18,000</td>
+        <td style="padding:12px;">13,535</td>
+        <td style="padding:12px;">9,000</td>
+        <td style="padding:12px;">40,535</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="color:#3f4aa8; margin-bottom:12px;">B: Day Scholars</h3>
+  <table style="width:100%; border-collapse:collapse; box-shadow:0 8px 25px rgba(0,0,0,0.06);">
+    <thead>
+      <tr style="background:#0a2a52; color:#fff;">
+        <th style="padding:14px;">S/N</th>
+        <th style="padding:14px;">Votehead</th>
+        <th style="padding:14px;">Term I (KES)</th>
+        <th style="padding:14px;">Term II (KES)</th>
+        <th style="padding:14px;">Term III (KES)</th>
+        <th style="padding:14px;">Total (KES)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">1</td>
+        <td style="padding:12px;">Lunch</td>
+        <td style="padding:12px;">6,000</td>
+        <td style="padding:12px;">6,000</td>
+        <td style="padding:12px;">6,000</td>
+        <td style="padding:12px;">18,000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  </div>
+      
+      
+
+    <!-- ================= 8-4-4 SECTION ================= -->
+    <div id="kcse" class="admissions-content">
+      <h2>8-4-4 Curriculum – Senior Secondary Admissions</h2>
+
+      <h3>Eligibility Criteria</h3>
+      <ul>
+        <li>Completion of Senior Secondary / KCPE with minimum grades</li>
+        <li>Age within Ministry of Education guidelines</li>
+        <li>Academic readiness for Senior Secondary curriculum</li>
+      </ul>
+
+      <h3>Required Documents</h3>
+      <ul>
+        <li>Completed Admission Form</li>
+        <li>Birth Certificate / National ID</li>
+        <li>KCPE / Senior Secondary Report Cards</li>
+        <li>Passport-sized photographs</li>
+        <li>Medical / Vaccination Records</li>
+      </ul>
+
+      <h3>Admission Process</h3>
+      <ul>
+        <li>Fill the application form (online or at school)</li>
+        <li>Submit required documents to Admissions Office</li>
+        <li>Attend assessment or interview if required</li>
+        <li>Receive confirmation and fee details</li>
+        <li>Complete fee payment to secure admission</li>
+      </ul>
+
+      <h3>Application Deadlines</h3>
+      <ul>
+        <li>Term 1: Applications close by January 2026</li>
+        <li>Term 2: Applications close by May 2026</li>
+        <li>Term 3: Applications close by September 2026</li>
+      </ul>
+<a 
+  href="https://forms.gle/vZdhiEsCesArYsV4A"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="cbe-apply-btn"
+  style="
+    display:inline-block;
+    margin:40px auto;
+    padding:20px 40px;
+    background:linear-gradient(135deg, #0a2a52, #3f4aa8);
+    color:#ffffff;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    letter-spacing:1px;
+    border-radius:50px;
+    box-shadow:0 12px 30px rgba(0,0,0,0.25);
+    text-align:center;
+    transition:all 0.3s ease;
+  "
+>
+  APPLY FOR 8-4-4 ADMISSION
+</a>
+
+<script>
+  const cbeBtn = document.querySelector('.cbe-apply-btn');
+
+  cbeBtn.addEventListener('mouseenter', () => {
+    cbeBtn.style.transform = 'translateY(-3px) scale(1.05)';
+    cbeBtn.style.boxShadow = '0 18px 40px rgba(0,0,0,0.35)';
+  });
+
+  cbeBtn.addEventListener('mouseleave', () => {
+    cbeBtn.style.transform = 'translateY(0) scale(1)';
+    cbeBtn.style.boxShadow = '0 12px 30px rgba(0,0,0,0.25)';
+  });
+</script>
+
+      
+<!-- ================= CBE / FORM IV FEE STRUCTURE ================= -->
+<div style="max-width:1000px; margin:auto; background:#fff; padding:30px; border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,0.08); margin-bottom:50px;">
+  <h2 style="text-align:center; color:#0a2a52; margin-bottom:25px;">KCSE / FORM IV Fee Structure 2026</h2>
+
+  <table style="width:100%; border-collapse:collapse; box-shadow:0 8px 25px rgba(0,0,0,0.06);">
+    <thead>
+      <tr style="background:#0a2a52; color:#fff;">
+        <th style="padding:14px;">S/N</th>
+        <th style="padding:14px;">Votehead</th>
+        <th style="padding:14px;">Term I (KES)</th>
+        <th style="padding:14px;">Term II (KES)</th>
+        <th style="padding:14px;">Total (KES)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">1</td>
+        <td style="padding:12px;">Boarding Equipment & Stores (BES)</td>
+        <td style="padding:12px;">14,680</td>
+        <td style="padding:12px;">10,705</td>
+        <td style="padding:12px;">25,385</td>
+      </tr>
+      <tr>
+        <td style="padding:12px;">2</td>
+        <td style="padding:12px;">Personal Emoluments (P.E)</td>
+        <td style="padding:12px;">2,500</td>
+        <td style="padding:12px;">1,400</td>
+        <td style="padding:12px;">3,900</td>
+      </tr>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">3</td>
+        <td style="padding:12px;">Electricity & Water Conservancy (EWC)</td>
+        <td style="padding:12px;">2,400</td>
+        <td style="padding:12px;">1,600</td>
+        <td style="padding:12px;">4,000</td>
+      </tr>
+      <tr>
+        <td style="padding:12px;">4</td>
+        <td style="padding:12px;">Repairs, Maintenance & Improvement</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">2,000</td>
+      </tr>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">5</td>
+        <td style="padding:12px;">Administration Costs (ADM)</td>
+        <td style="padding:12px;">1,800</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">2,800</td>
+      </tr>
+      <tr>
+        <td style="padding:12px;">6</td>
+        <td style="padding:12px;">Activity Fees (ACT)</td>
+        <td style="padding:12px;">150</td>
+        <td style="padding:12px;">100</td>
+        <td style="padding:12px;">250</td>
+      </tr>
+      <tr style="background:#f1f4ff;">
+        <td style="padding:12px;">7</td>
+        <td style="padding:12px;">Local Travel & Transport (LT&T)</td>
+        <td style="padding:12px;">1,200</td>
+        <td style="padding:12px;">1,000</td>
+        <td style="padding:12px;">2,200</td>
+      </tr>
+      <tr style="font-weight:bold; background:#e0e6f5;">
+        <td colspan="2" style="padding:12px; text-align:right;">TOTAL (KES)</td>
+        <td style="padding:12px;">23,730</td>
+        <td style="padding:12px;">16,805</td>
+        <td style="padding:12px;">40,535</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    </div>
+
+
+  <!-- INLINE JS -->
+  <script>
+    function showStream(stream){
+      const CBE = document.getElementById('CBE');
+      const kcse = document.getElementById('kcse');
+
+      if(stream==='CBE'){
+        CBE.classList.add('active');
+        kcse.classList.remove('active');
+      } else if(stream==='kcse'){
+        kcse.classList.add('active');
+        CBE.classList.remove('active');
+      }
+    }
+
+    // Show CBE / CBE by default
+    document.addEventListener('DOMContentLoaded', () => {
+      showStream('CBE');
+    });
+  </script>
+
+<footer style="
+  background:#1e3a8a;
+  color:#ffffff;
+  margin-top:0px;
+  margin-bottom: 0px;
+  font-family:Arial, sans-serif;
+  width:100%;
+">
+
+  <!-- MAIN FOOTER CONTENT -->
+  <div style="
+    max-width:100%;
+    margin:0px;
+    padding:20px 10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+
+    color:#ffffff;
+  ">
+
+    <!-- LEFT: SCHOOL INFO -->
+    <div style="
+      width:70%;
+      min-width:280px;
+      color:#ffffff;
+    ">
+      <h2 style="
+        font-size:34px;
+        margin-bottom:25px;
+        color:#ffffff;
+      ">
+        Musuani Secondary School
+      </h2>
+
+      <p style="margin:12px 0; color:#ffffff;">
+        <strong>School Motto :</strong> Excellence Through Discipline
+      </p>
+
+      <p style="margin:12px 0; color:#ffffff;">
+        <strong>School Mission :</strong> To provide quality education that nurtures academic excellence, discipline, and moral integrity.
+      </p>
+
+      <p style="margin:12px 0; color:#ffffff;">
+        <strong>School Vision :</strong> To be a leading institution in holistic secondary education.
+      </p>
+    </div>
+
+    <!-- RIGHT: CONTACT INFO -->
+    <div style="
+      width:40%;
+      min-width:280px;
+      text-align:right;
+      color:#ffffff;
+    ">
+      <h3 style="
+        font-size:24px;
+        margin-bottom:20px;
+        color:#ffffff;
+      ">
+        Contact Us
+      </h3>
+
+      <p style="margin:10px 0; color:#ffffff;">Email: musuani.sec@gmail.com</p>
+      <p style="margin:10px 0; color:#ffffff;">Phone: 0722242293 </p>
+      <p style="margin:10px 0; color:#ffffff;">Address: 647-90400 </p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BOTTOM -->
+  <div style="
+    border-top:1px solid rgba(255,255,255,0.3);
+    padding:18px 10px;
+    text-align:center;
+    font-size:14px;
+    color:#ffffff;
+  ">
+    © 2026 Musuani Secondary School. All rights reserved.<br>
+
+    Powered by
+    <a href="mailto:mwangiemmah2023@gmail.com" style="
+      color:#ffffff;
+      font-weight:600;
+      text-decoration:none;
+    ">Service Provider</a>
+  </div>
+
+</footer>
+</body>
+</html>
