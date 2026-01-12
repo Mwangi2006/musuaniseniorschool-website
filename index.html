@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | MUSUANI SECONDARY SCHOOL </title>
+  <title>Home | MUSUANI SENIOR SCHOOL </title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
   <style>
@@ -161,13 +161,13 @@
   object-fit: cover;
 }
 
-/* Curriculum Slides */
-.curriculum-slide {
+/* education Slides */
+.education-slide {
   position: absolute;
   inset: 0;
 }
 
-.curriculum-slide img {
+.education-slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -229,7 +229,7 @@ footer {
 
   <!-- Top Navigation Bar -->
   <div class="navbar">
-    <a href="#" class="school-name">MUSUANI SECONDARY SCHOOL</a>
+    <a href="#" class="school-name">MUSUANI SENIOR SCHOOL</a>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="academics.html">Academics</a>
@@ -306,7 +306,7 @@ footer {
           margin-bottom:20px;
           color:#000;
       ">
-        Welcome to Musuani<br>Secondary School
+        Welcome to Musuani<br>Senior  School
       </h1>
 
       <p style="
@@ -315,8 +315,8 @@ footer {
           color:#3f4aa8;
           margin-bottom:15px;
       ">
-        A public mixed secondary school categorized as C2 under the
-        Competency-Based Education (CBE) curriculum. We are dedicated to
+        A public mixed Senior school categorized as C2 under the
+        Competency-Based Education (CBE) education. We are dedicated to
         empowering our students through quality education, discipline,
         and integrity.
       </p>
@@ -383,7 +383,7 @@ footer {
     Providing quality, competency-based education that nurtures academic excellence,
     discipline, and responsible citizenship.
   </p>
-  <!-- ===== Our Curriculum Section ===== -->
+  <!-- ===== Our education Section ===== -->
 <section style="
     max-width:1200px;
     margin:60px auto;
@@ -406,7 +406,7 @@ footer {
           margin-bottom:20px;
           color:#000;
       ">
-        Our Curriculum
+        Our education
       </h2>
 
       <p style="
@@ -415,8 +415,8 @@ footer {
           color:#3f4aa8;
           margin-bottom:15px;
       ">
-        Our school implements the Competency-Based Curriculum (CBC) as approved by
-        the Ministry of Education. The curriculum is designed to equip learners
+        Our school implements the Competency-Based education (CBE) as approved by
+        the Ministry of Education. The education is designed to equip learners
         with practical skills, values, and competencies required for academic
         success and lifelong learning.
       </p>
@@ -426,7 +426,7 @@ footer {
           line-height:1.8;
           color:#3f4aa8;
       ">
-        We offer Senior Secondary curriculum under CBE system, with a
+        We offer Senior School education under CBE system, with a
         strong focus on academic achievement, talent development, and career
         preparedness.
       </p>
@@ -440,18 +440,18 @@ footer {
         overflow:hidden;
     ">
 
-      <div class="curriculum-slide" style="position:absolute; inset:0;">
+      <div class="education-slide" style="position:absolute; inset:0;">
         <img src="https://i.ibb.co/b5VVgMR1/CBE.jpg"
-             alt="CBC Learning"
+             alt="CBE Learning"
              style="width:100%; height:100%; object-fit:cover;">
       </div>
 
-      <div class="curriculum-slide" style="display:none;">
+      <div class="education-slide" style="display:none;">
         <img src="https://i.ibb.co/Vp9BhT31/CBE1.png"
              alt="Senior Secondary">
       </div>
 
-      <div class="curriculum-slide" style="display:none;">
+      <div class="education-slide" style="display:none;">
         <img src="https://i.ibb.co/JwWq84JQ/KNECCBE.jpg"
              alt="Senior Secondary">
       </div>
@@ -462,13 +462,13 @@ footer {
 
 <!-- ===== AUTO CAROUSEL SCRIPT ===== -->
 <script>
-  let curriculumSlides = document.querySelectorAll('.curriculum-slide');
-  let curriculumIndex = 0;
+  let educationSlides = document.querySelectorAll('.education-slide');
+  let educationIndex = 0;
 
   setInterval(() => {
-    curriculumSlides[curriculumIndex].style.display = "none";
-    curriculumIndex = (curriculumIndex + 1) % curriculumSlides.length;
-    curriculumSlides[curriculumIndex].style.display = "block";
+    educationSlides[educationIndex].style.display = "none";
+    educationIndex = (educationIndex + 1) % educationSlides.length;
+    educationSlides[educationIndex].style.display = "block";
   }, 8000); // changes every 8 seconds
 </script>
 
@@ -493,7 +493,7 @@ footer {
       margin:0 auto;
       text-align:center;
   ">
-    As Kenya embraces the Competency-Based Curriculum, Musuani Secondary School is
+    As Kenya embraces the Competency-Based education, Musuani Senior School is
     actively preparing to align our teaching approaches and facilities with this
     new system. We believe in equipping students with future-ready skills while
     maintaining our tradition of academic excellence. As the first batch of
@@ -559,12 +559,12 @@ footer {
 
     <div style="background:#0a2a52; color:#fff; padding:25px;">
       <h3>Learn More About CBE</h3>
-      <p style="line-height:1.6;">Understand the new curriculum framework.</p>
+      <p style="line-height:1.6;">Understand the new education framework.</p>
     </div>
 
     <div style="background:#0a2a52; color:#fff; padding:25px;">
       <h3>Admissions</h3>
-      <p style="line-height:1.6;">Join Musuani Secondary School.</p>
+      <p style="line-height:1.6;">Join Musuani Senior School.</p>
     </div>
     <div style="background:#0a2a52; color:#fff; padding:25px;">
       <h3>Fee Structure</h3>
@@ -634,7 +634,7 @@ footer {
 
   <div class="faq-item" style="margin-bottom:15px;">
     <div onclick="toggleFAQ(1)" style="background:#ffffff; padding:18px 20px; cursor:pointer; font-weight:600; display:flex; justify-content:space-between;">
-      Which pathways and elective tracks are available under the CBC?
+      Which pathways and elective tracks are available under the CBE?
       <span id="icon1">+</span>
     </div>
     <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
@@ -660,8 +660,11 @@ footer {
       <span id="icon3">+</span>
     </div>
     <div class="faq-answer" style="display:none; padding:15px 20px; color:#3f4aa8;">
-      Musuani Secondary School recorded strong academic performance, reflecting
+      Musuani Senior School recorded strong academic performance, reflecting
       our commitment to quality teaching and learner support.
+        <img src="https://i.ibb.co/Kc20h5pk/kcse-results.jpg" alt="Musuani Secondary School Campus View"
+             style="width:100%; height:100%; object-fit:cover;">
+      
     </div>
   </div>
 
@@ -752,7 +755,7 @@ footer {
 
       <!-- School Info -->
       <div style="flex:1; min-width:200px;">
-        <h3>Musuani Secondary School</h3>
+        <h3>Musuani Senior School</h3>
         <p><strong>School Motto:</strong> Shine and Reflect</p>
         <p><strong>Mission:</strong> To become a model center for holistic development of the learner through self-discipline and provision of quality education.</p>
         <p><strong>Vision:</strong> A model centre of excellence for holistic development</p>
@@ -782,12 +785,13 @@ footer {
     </div>
 
     <div style="border-top:1px solid rgba(255,255,255,0.3); text-align:center; padding:15px; font-size:14px; margin-top:20px;">
-      © 2026 Musuani Secondary School. All rights reserved.<br>
+      © 2026 Musuani Senior School. All rights reserved.<br>
       Powered by <a href="mailto:mwangiemmah2023@gmail.com" style="color:#ffffff; text-decoration:none; font-weight:600;">Service Provider</a>
     </div>
   </footer>
 
 </html>
+
 
 
 
